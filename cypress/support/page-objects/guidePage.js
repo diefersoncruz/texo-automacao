@@ -4,7 +4,7 @@ class GuidePage {
     }
 
     clickLinkOnGuidadePage(hrefPage){
-        cy.get(`a[href="${hrefPage}"]`).click();
+        cy.get(`a[href="${hrefPage}"]`).click({force: true, stop: true});
     }
 
     exportDataOfPage(pageUrl, fileName, exportPath, fileExtension = 'json'){

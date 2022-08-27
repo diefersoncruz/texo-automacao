@@ -7,6 +7,7 @@ describe('Given I access the menu Guide', () => {
         it('Then I should see a list of albums objects', () => {
             cy.visit('/');
             guidePage.clickOnGuideMenu();
+            //guidePage.clickLinkOnGuidadePage('/albums/1/photos');
             guidePage.exportDataOfPage('/albums/1/photos','albums1','report');
             cy.compareFixtureFileDataJson('albums1-id6-DataValidation','cypress/report/albums1')
           });
